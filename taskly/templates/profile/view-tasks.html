@@ -1,0 +1,56 @@
+{% load static %}
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page🏠</title>
+
+    <link
+    rel="stylesheet" type="text/css" href="https://bootswatch.com/5/solar/bootstrap.min.css"
+  />
+
+    <link
+      rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}"
+    />
+
+</head>
+
+    {% include 'base.html' %}
+
+    <br>
+
+
+
+    <h3 class="text-center"> My tasks </h3>
+
+    <hr>
+
+    {% for tsk in task %}
+
+        <div class="container bg-white shadow-md p-5 form-layout" style="margin-top: 20px;">
+            
+            {{ tsk.title }}
+
+            <br><br>
+
+            {{ tsk.content }}
+        
+            <br><br>
+
+            <a href="{% url 'update-task' tsk.id %}"> Update task </a>
+    
+            <br><br>
+    
+            <a href="{% url 'delete-task' tsk.id %}"> Delete task </a>
+        </div>
+
+    {% endfor %}
+
+</div>
+
+</html>
+
+

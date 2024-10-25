@@ -1,0 +1,8 @@
+h1 {
+    color: rgb(221, 136, 24);
+}
+
+.form-layout {
+    border-radius: 10px;
+    width: 500px; /* or you can use a larger fixed width if needed, like 300px */
+} 
