@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home Page🏠</title>
+    <title> Taskly | Dashboard </title>
 
     <link
     rel="stylesheet" type="text/css" href="https://bootswatch.com/5/solar/bootstrap.min.css"
@@ -18,25 +18,19 @@
 
 </head>
 
-    {% include 'base.html' %}
+{% include 'profile/base.html' %}
 
     <br>
 
 <div class="container bg-white shadow-md p-5 form-layout">
 
-    <h2> This is the Dashboard Page! </h2>
+    <h2 style="color: orange;" class="text-center"> Taskly </h2>
+
+    <br> 
+
+    <p class="text-center"> Welcome, to Taskly- <br><br> Your personal task manager application! </p>
 
     <br>
-
-    <a href="{% url 'create-task' %}"> Create task </a>
-
-    <br><br>
-
-    <a href="{% url 'view-tasks' %}"> View tasks </a>
-
-    <br><br>
-
-    <a href="{% url 'user-logout' %}"> Logout </a>
 
 </div>
 

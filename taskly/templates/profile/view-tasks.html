@@ -6,7 +6,8 @@
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home Page🏠</title>
+    <title> Taskly | View Task </title>
+
 
     <link
     rel="stylesheet" type="text/css" href="https://bootswatch.com/5/solar/bootstrap.min.css"
@@ -18,13 +19,11 @@
 
 </head>
 
-    {% include 'base.html' %}
+{% include 'profile/base.html' %}
 
     <br>
 
-
-
-    <h3 class="text-center"> My tasks </h3>
+    <h3 class="text-center" style="color: orange;"> View tasks </h3>
 
     <hr>
 
@@ -32,19 +31,22 @@
 
         <div class="container bg-white shadow-md p-5 form-layout" style="margin-top: 20px;">
             
-            {{ tsk.title }}
+            <h3> {{ tsk.title }} </h3>
 
-            <br><br>
+            <br>
 
             {{ tsk.content }}
         
-            <br><br>
+            <br><br><br>
 
-            <a href="{% url 'update-task' tsk.id %}"> Update task </a>
-    
-            <br><br>
-    
-            <a href="{% url 'delete-task' tsk.id %}"> Delete task </a>
+            <a class="btn btn-info navbar-btn" type="button" href="{% url 'update-task' tsk.id %}"
+            >Update task</a>
+
+            &nbsp; &nbsp; &nbsp;
+
+            <a class="btn btn-danger navbar-btn" type="button" href="{% url 'delete-task' tsk.id %}"
+            >Delete task</a>
+
         </div>
 
     {% endfor %}

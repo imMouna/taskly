@@ -5,7 +5,8 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Home Page🏠</title>
+        <title> Taskly | Register </title>
+
 
         <link
           rel="stylesheet" type="text/css" href="https://bootswatch.com/5/solar/bootstrap.min.css"
@@ -17,14 +18,13 @@
 
     </head>
 
-
-    {% include 'base.html' %}
+    {% include 'pre-base.html' %}
 
     <br>
 
     <div class="container bg-white shadow-md p-5 form-layout">
 
-    <h1>Registration Page!</h1>
+    <h3 style="color: orange;">Registration Page!</h3>
     
     <br>
 
@@ -44,7 +44,14 @@
         {{form.password2|as_crispy_field}}
         <br><br>
 
-        <input class="btn btn-primary navbar-btn" type="submit", value="Submit">
+        <input class="btn btn-primary navbar-btn" type="submit", value="Register">
+
+        <br><br>
+
+        <p style="color: red;"> Already, have an account? 
+          <br>
+          <a href="{% url 'my-login' %}">Login</a>
+        </p>
 
     </form>
     </div>

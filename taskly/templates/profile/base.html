@@ -1,0 +1,74 @@
+{% load static %}
+<nav
+  class="navbar navbar-expand-lg navbar-light bg-light justify-content-center"
+>
+<a href="{% url '' %}">
+        
+  <img src="{% static 'images/checklist.png' %}" alt="" style="width: 45px; height: 45px; margin-left: 15px;">
+
+</a>
+
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNavDropdown"
+    aria-controls="navbarNavDropdown"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse text-center" id="navbarNavDropdown">
+    <ul class="navbar-nav ml-auto">
+      &nbsp; &nbsp; &nbsp;
+
+      <!-- Register --->
+      <li class="nav-item">
+        <a class="btn btn-outline-primary navbar-btn" type="button" href="{% url 'register' %}"
+        >Register</a
+        >
+      </li>
+
+      &nbsp; &nbsp; &nbsp;
+
+      <!-- Create task --->
+      <li class="nav-item">
+        <a
+          class="btn btn-outline-primary navbar-btn"
+          type="button"
+          href="{% url 'create-task' %}"
+        >
+          Create task
+        </a>
+      </li>
+
+      &nbsp; &nbsp; &nbsp;
+
+      <!-- View tasks --->
+      <li class="nav-item">
+        <a
+          class="btn btn-outline-primary navbar-btn"
+          type="button"
+          href="{% url 'view-tasks' %}"
+        >
+          View tasks
+        </a>
+      </li>
+
+      &nbsp; &nbsp; &nbsp;
+
+      <!-- User logout --->
+      <li class="nav-item">
+        <a
+          class="btn btn-primary navbar-btn"
+          type="button"
+          href="{% url 'user-logout' %}"
+        >
+          User logout
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

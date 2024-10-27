@@ -5,7 +5,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Home Page🏠</title>
+        <title> Taskly | Dashboard </title>
 
         <link
           rel="stylesheet" type="text/css" href="https://bootswatch.com/5/solar/bootstrap.min.css"
@@ -18,13 +18,13 @@
     </head>
 
 
-    {% include 'base.html' %}
+    {% include 'profile/base.html' %}
 
     <br>
 
     <div class="container bg-white shadow-md p-5 form-layout">
 
-    <h1>Delete a task!</h1>
+    <h3 style="color: orange;">Delete a task!</h3>
     
     <br>
 
@@ -36,10 +36,12 @@
 
         <br> 
 
+        <input class="btn btn-primary navbar-btn" type="submit", value="Delete task">
+
+        <br><br>
+
         <a href="{% url 'view-tasks' %}"> Go back </a>
 
-        <br> <br>
-        <input class="btn btn-primary navbar-btn" type="submit", value="Delete">
 
     </form>
     </div>
